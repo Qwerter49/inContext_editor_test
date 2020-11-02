@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  height: 100vh;
+}
+.AppEraserClicked {
+  text-align: center;
+  height: 100vh;
+  cursor: url(./eraser.svg), auto;
+}
+.AppHighlightClicked {
+  text-align: center;
+  height: 100vh;
+  cursor: url(./highlighter.svg), auto;
 }
 
 .App-logo {
@@ -12,6 +23,67 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+
+
+.editor-container {
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  right: 0;
+  height: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  /* justify-content: space-evenly; */
+width: 500px;
+height: 200px;
+}
+
+.eraser {
+width: 200px;
+height: 200px;
+position: relative;
+top: 8rem;
+transition-duration: 0.5s;
+}
+.eraser:hover {
+  top: 3rem;
+  transition-duration: 0.5s;
+}
+.eraserClicked {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 4rem;
+  transition-duration: 0.5s;
+  }
+.highlighter {
+  width: 200px;
+  height: 200px;
+  transform: rotate(225deg);
+  position: relative;
+  top: 9rem;
+  left: 4rem;
+  transition-duration: 0.5s;
+}
+.highlighterClicked {
+  width: 200px;
+  height: 200px;
+  transform: rotate(225deg);
+  position: relative;
+  top: 5rem;
+  left: 4rem;
+  transition-duration: 0.5s;
+}
+.highlighter:hover {
+  top: 3rem;
+  transition-duration: 0.5s;
+  /* cursor: url('./highlighter.svg'), auto; */
+}
+
 
 .App-header {
   background-color: #282c34;
